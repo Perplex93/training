@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de"><!--Ist der Anfang und das Ende des HTML Dokuments und beschreibt mit lang die Seitensprache-->
+<head>
+    <!--Diese Sachen müssen immer im head stehen, diese Inhalte sind nicht direkt auf der Seite zu sehen-->
+    <meta charset="UTF-8"><!--charset = Zeichensatz und Attributwert ist UTF-8 das ist Standartzeichensatz und erlaubt es, alle üblichen (und unüblichen) Zeichen zu benutzen-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Unterbindet die automatische skalierung auf kleinen Bildschirmen-->
+    <meta name="description" content="Dieser text kann von Suchmaschinen in der Trefferliste angezeigt werden. Die description ist wichtig für die SEO."><!--Wichtig für die Suchmaschinenoptimierung-->
+    <meta name="robots" content="noindex,nofollow"><!--Besser geht es mit der Datei robot.txt-->
+    <link rel="stylesheet" href="training.css"><!--Gibt den Pfad zur CSS Datein an-->
+    <title>Training von Jennifer Prosic</title><!--Titel der Website die oben im Tab steht-->
+</head>
+<body><!--Im body steht das was direkt im Browserfenster zu sehen ist darin befindet sich der eigentliche Inhalt-->
+
+    <header><!--kennzeichnet den Kopf einer Seite oder eines Bereichs-->
+        <nav><!--ist für die Hauptnavigation vorgesehen-->
+            <ul><!--steht für unorderd list also ungeordnete Liste-->
+                <li><a href="index.html" class="aktuell">Home</a></li><!--die links im nav bei denen man auf der Website naigieren kann, li steht für list item (Listenpunkte) die class ist dazu da um diesen link anders zu formatieren-->
+                <li><a href="infos.html">Infos</a></li><!--das a Element steht für anchor also Anker darin steht der Linktext den man anklicken kann, href bestimmt wohin man gelangt wenn man drauf drückt es bedeutet Hypertext Reference-->
+                <li><a href="uebermich.html">Über mich</a></li>
+            </ul>
+        </nav>
+        <h1>Meine Übungsseite</h1><!--Überschrift die Zahl neben h zeigt die größe an wobei 1 das größte ist und 6 die kleinste-->
+    </header>
+    <main><!--leitet den Hauptinhalt ein der immer unterschiedlich gefüllt sein kann-->
+        <article><!--Inhalte die eigenständig existieren können-->
+            <h2>HTML</h2>
+            <p><img src="img/mastery.webp" alt="HTML Code">HTML = Hypertext Markup Language (Hypertext Auszeichnungssprache) </p><!--ein paragraph mit einem bild img steht für image, src zeigt den Pfad indem das Bild zu finden ist und alt gibt dem Bild eine kurze Beschreibung-->
+            <p> HTML ist eine textbasierte Auszeichnungssprache zur Strukturierung digitaler Dokumente wie Texte mit Hyperlinks.</p>
+        </article>
+        <article>
+            <h2>CSS</h2>
+            <p>Die Abkürzung CSS bedeutet Cascading Style Sheets(gestufte Gestaltungsbögen)</p>
+            <p>CSS ist eine Stylesheet-Sprache für elektronische Dokumente und zusammen mit HTML und DOM eine der Kernsprachen des World Wide Webs</p>
+            <p><img src="img/css-comic.jpg" alt="CSS-Code">CSS wurde entworfen , um Darstellungsvorgaben weitgehend von den Inhalten zu trennen></p>
+        </article>
+    </main>
+    <section id="ueberschriften">
+    <article>
+        <h2>Überschriften Größenordnung</h2>
+        <h1>Überschrift</h1>
+        <h2>Überschrift h2</h2>
+        <h3>Überschrift h3</h3>
+        <h4>Überschrift h4</h4>
+        <h5>Überschrift h5</h5>
+        <h6>Überschrift h6</h6>
+    </article>
+    </section>
+    <section id="lists">
+        <article>
+            <h2>Klassische Liste</h2>
+            <p><img src="img/Htmlcomicstrip.png" alt="Ungeordnete Liste">Es gibt mehrere Arten von Listen</p>
+        </article>
+        <article>
+        <h2>Ungeordnete Listen</h2>
+        <ul>
+            <li>Das ist</li>
+            <li>eine ungeordnete</li>
+            <li>Liste</li>
+        </ul>
+        <h2>Geordnete Listen</h2>
+        <ol>
+            <li>Zur Aufzählung</li>
+            <li>Von verschiedensten Dingen</li>
+            <li>Sehr praktisch</li>
+            <li>Und alles voll automatisch</li>
+        </ol>
+        <h3>Listenvariationen</h3>
+        <h4>Listentyp a b c, Start bei 3</h4>
+        <ol start="3" type="a">
+            <li>Erster Punkt</li>
+            <li>Zweiter Punkt</li>
+            <li>Dritter Punkt</li>
+        </ol>
+        <h4>Rückwärts Liste</h4>
+        <ol reversed>
+            <li>...</li>
+            <li>...</li>
+            <li>...</li>
+        </ol>
+        <p>Start!</p>
+    </article>
+    </section>
+    <footer><!--bezeichnet den Fußbereich einer Website kann aber auch ein footer für das Ende eines articles sein-->
+        <p>&copy; 2020</p>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,89 @@
+/*Ein CSS Befehl besteht immer aus einem Selektor einer Deklaration und einem zugewiesenen Wert*/
+body{ 
+    font-size: 120%;/*legt die Schriftgröße fest*/
+    font-family: "Helvetica New", Arial, sans-serif;/*bestimmt die Schriftart diese muss am PC installiert sein oder kann auch mit @import importiert werden*/
+    line-height: 1.4;/*legt die Zeilenhöhe fest*/
+    background-color: #ffffff;/*Farbe des Hindergrundes*/
+    color: #263238;/*Textfarbe*/
+    margin: 0;/*legt den Außenabstand von Elementen fest */
+}
+h1{
+    font-size: 3rem;/*3rem bedeutet das die Schrift 3 mal so groß ist wie im Browser festgelegt*/
+    font-weight: normal;/*damit die Schrift nicht fett sondern normal angezeigt wird*/
+    text-align: center;/*zentriert die Überschrift*/
+    padding: 2rem;/*sorgt für den Innenabstand*/
+    margin: 0;/*mit 0 entfernt man den sonst vorhandenen Außenabstand*/
+}
+nav{
+    background-color: #263238;
+}
+nav ul{ /*hier wird nur die ul der naigation verändert*/
+    margin: 0;
+    display: flex;/*bewirkt das die Listenpunkte nebeneinander statt untereinander angezeigt werden*/
+    list-style: none;/*löscht die normalerweise vorhandenen Listenpunkte*/
+}
+nav a{/*das a Element innerhalb des nav*/
+    color: white;
+    text-decoration: none;/*die standard Linksunterstreichung wird entfernt*/
+    display: block;/*sorgt dafür das die Links so breit werden wie sie können*/
+    padding: 0.8rem;
+}
+nav a.aktuell{/*wählt das a Element mit der class aktuell das sich im nav befindet*/
+    font-weight: bold;
+}
+main{
+    max-width: 62rem;
+    margin: auto;/*sorgt für die zentrierung*/
+    display: flex;/*ordnet die im main befindlichen article elemente nebeneinander an*/
+}
+article{
+    width: 50%;/*die artikel bekommen eine breite von 50%*/
+    margin: 0 2rem;
+}
+footer{
+    background-color: #263238;
+    color: #ffffff;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+img{
+    max-width: 100%;/*das bild soll 100% des elternelements einnehmen*/
+    height: auto;/*die höhe passt sich automatisch an damit die proportionen erhalten bleiben*/
+}
+p{
+    text-align: center;
+}
+h2{
+    text-align: center;
+    
+}
+h3{
+    text-align: center;
+}
+h4{
+    text-align: center;
+}
+h5{
+    text-align: center;
+}
+h6{
+    text-align: center;
+}
+section#lists{
+    max-width: 62rem;
+    margin: auto;
+    display: flex;
+}
+section#ueberschriften{
+    max-width: 62rem;
+    margin: auto;
+    display: flex;
+}
+@media screen and (max-width:530px){/*wenn es sich um einen bildschirm handelt der max 530px in der breite darstellen kann*/
+    main{
+        display: block;/*die elemente im main bereich sollen nicht mehr nebeneinander sonder untereinander dargestellt werden*/
+    }
+    article{
+        width: auto;/*die breite der elemente passt sich automatisch an*/
+    }
+}
