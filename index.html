@@ -8,6 +8,7 @@
     <meta name="robots" content="noindex,nofollow"><!--Besser geht es mit der Datei robot.txt-->
     <link rel="stylesheet" href="training.css"><!--Gibt den Pfad zur CSS Datein an-->
     <title>Training von Jennifer Prosic</title><!--Titel der Website die oben im Tab steht-->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💩</text></svg>">
 </head>
 <body><!--Im body steht das was direkt im Browserfenster zu sehen ist darin befindet sich der eigentliche Inhalt-->
 
@@ -17,24 +18,30 @@
                 <li><a href="index.html" class="aktuell">Home</a></li><!--die links im nav bei denen man auf der Website naigieren kann, li steht für list item (Listenpunkte) die class ist dazu da um diesen link anders zu formatieren-->
                 <li><a href="infos.html">Infos</a></li><!--das a Element steht für anchor also Anker darin steht der Linktext den man anklicken kann, href bestimmt wohin man gelangt wenn man drauf drückt es bedeutet Hypertext Reference-->
                 <li><a href="uebermich.html">Über mich</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><label for="search">Suche</label>
+                    <input type="search" id="suche" name="suche"></li>
             </ul>
         </nav>
+        <div><img class="header" src="img/it-comic-run.png" alt="Headerbild"></div>
         <h1>Meine Übungsseite</h1><!--Überschrift die Zahl neben h zeigt die größe an wobei 1 das größte ist und 6 die kleinste-->
+        <hr>
     </header>
     <main><!--leitet den Hauptinhalt ein der immer unterschiedlich gefüllt sein kann-->
         <article><!--Inhalte die eigenständig existieren können-->
             <h2>HTML</h2>
-            <p><img src="img/mastery.webp" alt="HTML Code">HTML = Hypertext Markup Language (Hypertext Auszeichnungssprache) </p><!--ein paragraph mit einem bild img steht für image, src zeigt den Pfad indem das Bild zu finden ist und alt gibt dem Bild eine kurze Beschreibung-->
-            <p> HTML ist eine textbasierte Auszeichnungssprache zur Strukturierung digitaler Dokumente wie Texte mit Hyperlinks.</p>
+            <p><img src="img/mastery.webp" alt="HTML Code" title="Master of HTML">HTML = Hypertext Markup Language (Hypertext Auszeichnungssprache) </p><!--ein paragraph mit einem bild img steht für image, src zeigt den Pfad indem das Bild zu finden ist und alt gibt dem Bild eine kurze Beschreibung-->
+            <p><abbr title="Hypertext Markup Language">HTML</abbr> ist eine textbasierte Auszeichnungssprache zur Strukturierung digitaler Dokumente wie Texte mit Hyperlinks.</p>
         </article>
         <article>
             <h2>CSS</h2>
-            <p>Die Abkürzung CSS bedeutet Cascading Style Sheets(gestufte Gestaltungsbögen)</p>
-            <p>CSS ist eine Stylesheet-Sprache für elektronische Dokumente und zusammen mit HTML und DOM eine der Kernsprachen des World Wide Webs</p>
-            <p><img src="img/css-comic.jpg" alt="CSS-Code">CSS wurde entworfen , um Darstellungsvorgaben weitgehend von den Inhalten zu trennen></p>
+            <p>Die Abkürzung CSS bedeutet <em>Cascading Style Sheets</em> (gestufte Gestaltungsbögen)</p>
+            <p><strong> CSS </strong>ist eine Stylesheet-Sprache für elektronische Dokumente und zusammen mit HTML und DOM eine der Kernsprachen des World Wide Webs</p>
+            <p><img src="img/css-comic.jpg" alt="CSS-Code">CSS wurde entworfen , um Darstellungsvorgaben weitgehend von den Inhalten zu trennen</p>
         </article>
     </main>
-    <section id="ueberschriften">
+    <hr>
+    <section>
     <article>
         <h2>Überschriften Größenordnung</h2>
         <h1>Überschrift</h1>
@@ -44,11 +51,25 @@
         <h5>Überschrift h5</h5>
         <h6>Überschrift h6</h6>
     </article>
+    <article>
+        <h2>Das Element Pre</h2>
+        <p>
+            <pre>   Man kann auch 
+        Texte schreiben
+            und diese mit dem Element pre 
+            schon in der HTML 
+        Datei
+            Formatieren.
+            </pre>
+        </p>
+        <img id="humor" src="https://lh3.googleusercontent.com/proxy/hjAZSiKzLERheSwDszqvmNXxg4OcZ6X2-Wz20EsyhbWSLb7-lN3X-waKhcwUqclAKFImKjhWADohK4GFbtxVYgzQUg" alt="HTML Humor">
+    </article>
     </section>
-    <section id="lists">
+    <hr>
+    <section>
         <article>
             <h2>Klassische Liste</h2>
-            <p><img src="img/Htmlcomicstrip.png" alt="Ungeordnete Liste">Es gibt mehrere Arten von Listen</p>
+            <figure><img src="img/Htmlcomicstrip.png" alt=""><figcaption>Es gibt mehrere Arten von Listen</figcaption></figure>
         </article>
         <article>
         <h2>Ungeordnete Listen</h2>
@@ -80,8 +101,56 @@
         <p>Start!</p>
     </article>
     </section>
+    <hr>
+    <section>
+        <article>
+        <h2>Svg Einbinden</h3>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80">
+            <circle r="20" cx="60" cy="40" fill="blue"/></svg>
+        </article>
+        <article>
+            <table>
+                <thead>
+                <tr>
+                <th colspan="3">Meine Tabelle</th>
+                </tr>
+                </thead> 
+                <tbody>
+                <tr>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                    <th colspan="3">Ende</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </article>
+    </section>
     <footer><!--bezeichnet den Fußbereich einer Website kann aber auch ein footer für das Ende eines articles sein-->
-        <p>&copy; 2020</p>
+        <div>
+        <p>E-Mail:<br> <a href="jennifer.zarazik.93@gmail.com">jennifer.zarazik.93@gmail.com</a></p>
+        <p>Telefon:<br> <a href="tel:+4366475038987">066475038987</a> </p>
+        </div>
+        <p>&copy; <small>2020</small></p>
     </footer>
     
 </body>

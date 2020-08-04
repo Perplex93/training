@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="training.css">
+    <title>Kontakt Jennifer Prosic</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="infos.html">Infos</a></li>
+                <li><a href="uebermich.html">Über mich</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><label for="search">Suche</label>
+                    <input type="search" id="suche" name="suche"></li>
+            </ul>
+        </nav> 
+        <h2>Schicken Sie mir eine Nachricht </h2>
+    </header>
+    <main id="formular"> 
+    <form method="POST" action="mailto:jennifer.zarazik.93@gmail.com" enctype="text/plain">
+        <fieldset>
+            <legend>Ihre Anfrage</legend>
+        <div class="contact">
+            <label for="vorname">Vorname</label>
+            <input type="text" name="vorname" id="vorname" placeholder="Vorname" autofocus required>
+        </div>
+        <div class="contact">
+            <label for="emailadresse">E-Mail</label>
+            <input type="email" name="emailadresse" id="emailadresse" placeholder="ihre@emailadresse.com" required>
+        </div>
+        <div class="contact">
+            <label for="telefon">Telefon</label>
+            <input type="tel" name="telefon" id="telefon" placeholder="+43123 45678" required>
+        </div>
+        <div>
+            <label for="ihranliegen">Ihr Anliegen</label> 
+            <select name="ihranliegen" id="ihranliegen">
+            <option value="frage">Frage</option>
+            <option value="coding">Coding</option>
+            <option value="job">Job</option>
+            <option value="anderes">Anderes</option>
+            </select>
+        </div>  
+            <label for="kommentar">Kommentar</label>
+        <div>
+            <textarea name="kommentar" id="kommentar" cols="30" rows="10" placeholder="Weitere Details..."></textarea>
+        </div>
+        <div>
+            <input type="radio" name="wersindsie" id="privatperson" value="privatperson">
+            <label for="privatperson">Privatperson</label>
+            <input type="radio" name="wersindsie" id="betrieb" value="betrieb">
+            <label for="betrieb">Betrieb</label>
+        </div>
+        <div>
+        <input type="checkbox" name="rueckruf" value="ja" id="rueckruf">
+        <label for="rueckruf">Rückruf anfordern</label>
+       </div> 
+       <input type="submit">
+       <input type="reset">
+    </fieldset>
+    </form>
+    </main>
+</body>
+</html>
