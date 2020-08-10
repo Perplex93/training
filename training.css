@@ -14,10 +14,13 @@ h1{
     text-align: center;/*zentriert die Überschrift*/
     padding: 2rem;/*sorgt für den Innenabstand*/
     margin: 0;/*mit 0 entfernt man den sonst vorhandenen Außenabstand*/
+    letter-spacing: 2px;
+    text-shadow: grey 4px 3px 0;
 }
 nav{
     background-color: #420a50;
-    padding: 1.5rem;
+    position: fixed;
+    width: 100%;
 }
 nav ul{ /*hier wird nur die ul der naigation verändert*/
     margin: 0;
@@ -25,6 +28,7 @@ nav ul{ /*hier wird nur die ul der naigation verändert*/
     list-style: none;/*löscht die normalerweise vorhandenen Listenpunkte*/
     justify-content: center;
     justify-content: space-between;
+    font-variant: small-caps;
 }
 nav a{/*das a Element innerhalb des nav*/
     color: white;
@@ -38,8 +42,13 @@ nav a.aktuell{/*wählt das a Element mit der class aktuell das sich im nav befin
 nav a:hover{
     color: yellowgreen;
 }
+nav button{
+    display: none;
+}
 header{
-    background-color: yellowgreen;
+    background: linear-gradient(black,green,yellowgreen, white);
+    border-radius: 0 0 20% 20%;
+    box-shadow: #420a50 5px 5px 5px;
 }
 main{
     max-width: 62rem;
@@ -65,6 +74,7 @@ footer{
 }
 footer a{
     color: white;
+    text-decoration: overline;
 }
 footer a:hover{
     color: yellowgreen;
@@ -72,6 +82,33 @@ footer a:hover{
 img{
     max-width: 100%;/*das bild soll 100% des elternelements einnehmen*/
     height: auto;/*die höhe passt sich automatisch an damit die proportionen erhalten bleiben*/
+}
+
+#humor{
+    width: 400px;
+    height: auto;
+    margin-left: 50px;
+}
+
+a.button{
+    background-color: #420a50;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    border-radius: 40%;
+    border: outset;
+    width: 250px;
+    height: 35px;
+    margin-left: 15rem;
+    padding-top: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: grey 5px 5px 7px;
+}
+
+a.button:hover{
+    color: greenyellow;
+    transform: scale(110%);
 }
 
 div{
@@ -119,18 +156,44 @@ nav label{
 fieldset{
     text-align: center;
     width: 100%;
+    border: 2px outset black;
+    box-shadow: grey 0 0 0.5rem;
 }
 main#formular{
     justify-content: center;
+    width: 100%;
+}
+.contact{
+    display: flex;
+    justify-content: space-between;
+    width: 20rem;
+}
+
+input{
+    padding-right: 4rem;
+    margin-bottom: 1rem;
+}
+input:focus{
+    border:2px groove greenyellow;
+}
+
+#submit, #reset{
+    border: 2px outset grey;
+    color: grey;
+    margin-left: 1rem;
+}
+#submit:hover, #reset:hover{
+    color: black;
 }
 table{
-    border: solid red;
+    border: ridge red;
     width: 100%;
     height: 100%;
 }
 td, th{
     border: 2px dotted red;
 }
+
 hr{
     border: 3px #420a50;
     border-style: dotted;
@@ -146,6 +209,39 @@ hr{
         margin-left: 15rem;
     }
     section{
+        display: block;
+    }
+
+    a.button{
+        display: none;
+    }
+    nav ul{
+        flex-wrap: wrap;
+    }
+    .contact{
+        display: block;
+    }
+    nav ul{
+        display: block;
+        padding-left: 0;
+        display: none;
+        margin-top: 2rem;
+        margin-left: 1rem;
+    }
+    nav li{
+        margin: 2px 0px;
+        background: #222;
+    }
+    nav button{
+        position: absolute;
+        top: 0rem;
+        right: 0.5rem;
+        border:0;
+        background: white;
+        font-size: inherit;
+        display: block;
+    }
+    [aria-expanded="true"]~ul {
         display: block;
     }
 }

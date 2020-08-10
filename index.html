@@ -13,8 +13,9 @@
 <body><!--Im body steht das was direkt im Browserfenster zu sehen ist darin befindet sich der eigentliche Inhalt-->
 
     <header><!--kennzeichnet den Kopf einer Seite oder eines Bereichs-->
-        <nav><!--ist für die Hauptnavigation vorgesehen-->
-            <ul><!--steht für unorderd list also ungeordnete Liste-->
+        <nav>
+            <button class="navbutton" aria-expanded="false" aria-controls="navi-liste"><img src="/img/iconfinder_menu-alt_134216.png" alt=""> Menü</button><!--ist für die Hauptnavigation vorgesehen-->
+            <ul id="navi-liste"><!--steht für unorderd list also ungeordnete Liste-->
                 <li><a href="index.html" class="aktuell">Home</a></li><!--die links im nav bei denen man auf der Website naigieren kann, li steht für list item (Listenpunkte) die class ist dazu da um diesen link anders zu formatieren-->
                 <li><a href="infos.html">Infos</a></li><!--das a Element steht für anchor also Anker darin steht der Linktext den man anklicken kann, href bestimmt wohin man gelangt wenn man drauf drückt es bedeutet Hypertext Reference-->
                 <li><a href="uebermich.html">Über mich</a></li>
@@ -24,8 +25,10 @@
             </ul>
         </nav>
         <div><img class="header" src="img/it-comic-run.png" alt="Headerbild"></div>
+        <a class="button" href="uebermich.html">Das bin ich</a>
+        <a class="button" href="infos.html">Mehr Informationen</a>
         <h1>Meine Übungsseite</h1><!--Überschrift die Zahl neben h zeigt die größe an wobei 1 das größte ist und 6 die kleinste-->
-        <hr>
+
     </header>
     <main><!--leitet den Hauptinhalt ein der immer unterschiedlich gefüllt sein kann-->
         <article><!--Inhalte die eigenständig existieren können-->
@@ -62,7 +65,7 @@
             Formatieren.
             </pre>
         </p>
-        <img id="humor" src="https://lh3.googleusercontent.com/proxy/hjAZSiKzLERheSwDszqvmNXxg4OcZ6X2-Wz20EsyhbWSLb7-lN3X-waKhcwUqclAKFImKjhWADohK4GFbtxVYgzQUg" alt="HTML Humor">
+        <img id="humor" src="https://debeste.de/upload/70050765f6979b4f3a21282b026f3df44315.jpg" alt="HTML Humor">
     </article>
     </section>
     <hr>
@@ -152,6 +155,16 @@
         </div>
         <p>&copy; <small>2020</small></p>
     </footer>
-    
+   
 </body>
+<script>
+    const hamburger = document.querySelector('button[aria-expanded]');
+    function klappNav({
+        target
+    }){
+        const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+        hamburger.setAttribute('aria-expanded', !expanded);
+    }
+    hamburger.addEventListener('click', klappNav);
+</script> 
 </html>
